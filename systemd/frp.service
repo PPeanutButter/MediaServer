@@ -1,0 +1,13 @@
+[Unit]
+Description=frp
+After=network.target network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=/home/pi/program/frp_0.39.0_linux_arm64
+ExecStart=/home/pi/program/frp_0.39.0_linux_arm64/frpc -c /home/pi/program/frp_0.39.0_linux_arm64/frpc.ini
+Restart=on-failure
+RestartSec=5s
+
+[Install]
+WantedBy=multi-user.target

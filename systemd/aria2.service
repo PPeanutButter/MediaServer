@@ -1,0 +1,14 @@
+[Unit]
+Description=Aria2
+Documentation=https://github.com/PPeanutButter/MediaServer
+After=network.target network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=/home/pi/MediaServer
+ExecStart=/home/pi/MediaServer/aria2c --conf-path=/home/pi/MediaServer/aria2.conf
+Restart=on-failure
+RestartSec=5s
+
+[Install]
+WantedBy=multi-user.target

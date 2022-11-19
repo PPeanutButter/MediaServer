@@ -1,0 +1,14 @@
+[Unit]
+Description=MediaServer
+Documentation=https://github.com/PPeanutButter/MediaServer
+After=network.target network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=/home/pi/MediaServer
+ExecStart=python app.py /media/pi/NAS500 /media/pi/NAS600
+Restart=on-failure
+RestartSec=5s
+
+[Install]
+WantedBy=multi-user.target

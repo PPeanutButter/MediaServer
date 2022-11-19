@@ -1,0 +1,6 @@
+{
+    "JWT": {
+        "algorithm": "HS256",
+        "secret": "raspberry4b"
+    }
+}

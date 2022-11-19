@@ -1,0 +1,12 @@
+[Unit]
+Description=TensorBoard Logger
+After=network.target network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=/home/pi/MediaServer
+ExecStart=python plugin/logger.py
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
